@@ -1,7 +1,7 @@
 ﻿using LanchesDaVovo.Models;
 using System.Collections.Generic;
 
-namespace LanchesDaVovo.ViewModel
+namespace LanchesDaVovo.ViewModels
 {
     public class LancheListViewModel
     {

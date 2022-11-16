@@ -44,7 +44,7 @@ namespace LanchesDaVovo.Models
 
         }
 
-        public void AdicionarAoCarrinho(Lanche lanche, int quantidade)
+        public void AdicionarAoCarrinho(Lanche lanche)
         {
             //obttem o lanche do carrinho 
             var carrinhoCompraItem = _context.CarrinhoCompraItens.SingleOrDefault(

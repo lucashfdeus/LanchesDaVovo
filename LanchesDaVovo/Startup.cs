@@ -38,6 +38,8 @@ namespace LanchesDaVovo
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddScoped(cp => CarrinhoCompra.GetCarrinho(cp));
+            services.AddMemoryCache();
+            services.AddSession();
 
             services.AddDbContext<AppDbContext>(options => 
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -67,6 +69,9 @@ namespace LanchesDaVovo
 
             app.UseEndpoints(endpoints =>
             {
+                //endpoints.MapControllerRoute(
+                //    name: "default",
+                //    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
