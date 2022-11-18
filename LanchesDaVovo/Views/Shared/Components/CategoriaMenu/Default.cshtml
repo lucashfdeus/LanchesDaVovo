@@ -1,0 +1,14 @@
+﻿<div class="dropdown">
+  <a asp-controller="Lanche" asp-action="List" class="btn dropdown-toggle text-white-50" id="dropdownMenuLink" data-toggle="dropdown">
+        Lanches<b class="caret"></b>
+  </a>
+
+  <div class="dropdown-menu">
+       @foreach (var categoria in Model)
+        {
+            <a asp-controller="Lanche" asp-action="List" asp-route-categoria="@categoria.CategoriaNome" class="dropdown-item">@categoria.CategoriaNome</a>
+        }
+    <div class="dropdown-divider"></div>
+    <a asp-controller="Lanche" asp-action="List" asp-route-categoria="" class="dropdown-item">Ver todos os Lanches</a>
+  </div>
+</div>
